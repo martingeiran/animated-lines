@@ -7,6 +7,9 @@
   text-decoration: none;
   color: inherit;
   scroll-behavior: smooth;
+  --red: #b23dc1;
+  --green: #e1aa74;
+  --blue: #3876bf;
 }
 
 body {
@@ -41,15 +44,27 @@ h1 {
 }
 
 .red {
-  color: #192655;
+  color: var(--red);
 }
 
 .green {
-  color: #e1aa74;
+  color: var(--green);
 }
 
 .blue {
-  color: #3876bf;
+  color: var(--blue);
+}
+
+.hover-red:hover {
+  color: var(--red);
+}
+
+.hover-green:hover {
+  color: var(--green);
+}
+
+.hover-blue:hover {
+  color: var(--blue);
 }
 
 #top-navbar {
@@ -71,7 +86,8 @@ h1 {
 }
 /* Change color on hover */
 #top-navbar a:hover {
-  color: #fecb00;
+  --color: attr(data-color);
+  color: --color;
 }
 
 .link-container {
